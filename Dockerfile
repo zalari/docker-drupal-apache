@@ -47,8 +47,8 @@ RUN echo [mail function] >> /usr/local/etc/php/php.ini && \
 WORKDIR /var/www/html
 
 # https://www.drupal.org/node/3060/release
-ENV DRUPAL_VERSION 7.39
-ENV DRUPAL_MD5 6f42a7e9c7a1c2c4c9c2f20c81b8e79a
+ENV DRUPAL_VERSION 7.41
+ENV DRUPAL_MD5 7636e75e8be213455b4ac7911ce5801f
 
 RUN curl -fSL "http://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.tar.gz" -o drupal.tar.gz \
 	&& echo "${DRUPAL_MD5} *drupal.tar.gz" | md5sum -c - \
