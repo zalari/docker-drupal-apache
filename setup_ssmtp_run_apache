@@ -10,4 +10,10 @@ echo UseSTARTTLS=${SMTP_USE_STARTTLS} >> /etc/ssmtp/ssmtp.conf
 echo FromLineOverride=${SMTP_FROM_OVERRIDE} >> /etc/ssmtp/ssmtp.conf
 echo hostname=${SMTP_HOSTNAME} >> /etc/ssmtp/ssmtp.conf
 
+#we might need to change the user id for www-data,
+#to allow www-data to write to the shared host volume during dev
+if [ $CHANGE_USER_ID = "Yes" ]; then
+	usermod -u ${WWW_DATA_USER_ID} www-data
+fi
+
 apache2-foreground

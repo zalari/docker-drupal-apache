@@ -45,6 +45,10 @@ ENV SMTP_USE_STARTTLS No
 ENV SMTP_ROOT root@localhost
 ENV SMTP_HOSTNAME drupal.zz
 
+#allow running apache as root, to circumvent docker-host-sharing-file-ownership-madness
+ENV CHANGE_USER_ID No
+ENV WWW_DATA_USER_ID 1000
+
 #configure ssmtp by creating a new conf on run, generated from ENVs
 COPY setup_ssmtp_run_apache /usr/local/bin/
 CMD ["setup_ssmtp_run_apache"]
