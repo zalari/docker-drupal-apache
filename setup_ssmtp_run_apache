@@ -16,4 +16,7 @@ if [ $CHANGE_USER_ID = "Yes" ]; then
 	usermod -u ${WWW_DATA_USER_ID} www-data
 fi
 
+#change user back to www-data for linked volume
+chown www-data /var/www/html/sites -R
+
 apache2-foreground
