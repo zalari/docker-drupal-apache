@@ -2,8 +2,8 @@
 FROM php:5.6-apache
 
 MAINTAINER  Christian Ulbrich <christian.ulbrich@zalari.de>
-ENV REFRESHED_AT 2016-04-05
-ENV CONTAINER_VERSION 0.3.0
+ENV REFRESHED_AT 2016-05-11
+ENV CONTAINER_VERSION 0.4.0
 
 RUN a2enmod rewrite
 
