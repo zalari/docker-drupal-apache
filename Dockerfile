@@ -2,8 +2,8 @@
 FROM php:5.6-apache
 
 MAINTAINER  Christian Ulbrich <christian.ulbrich@zalari.de>
-ENV REFRESHED_AT 2016-06-29
-ENV CONTAINER_VERSION 0.5.0
+ENV REFRESHED_AT 2017-07-10
+ENV CONTAINER_VERSION 0.6.0
 
 RUN a2enmod rewrite
 
@@ -29,8 +29,8 @@ RUN echo "[mail function]" >> /usr/local/etc/php/php.ini && \
 WORKDIR /var/www/html
 
 # https://www.drupal.org/node/3060/release
-ENV DRUPAL_VERSION 7.44
-ENV DRUPAL_MD5 965ab5fe5457625ec8c18e5c1c455008
+ENV DRUPAL_VERSION 7.56
+ENV DRUPAL_MD5 5d198f40f0f1cbf9cdf1bf3de842e534
 
 RUN curl -fSL "http://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.tar.gz" -o drupal.tar.gz \
 	&& echo "${DRUPAL_MD5} *drupal.tar.gz" | md5sum -c - \
