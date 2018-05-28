@@ -12,3 +12,4 @@ We strive for latest Drupal 7 Releases, sorry 8 is currently not our concern. *L
 * 7.43
 * 7.56
 * 7.58
+* 7.59
