@@ -38,17 +38,17 @@ RUN curl -fSL "http://ftp.drupal.org/files/projects/drupal-${DRUPAL_VERSION}.tar
 	&& rm drupal.tar.gz \
 	&& chown -R www-data:www-data sites
 
-#setup ssmtp ENVs defaults
-ENV SMTP_MAILHOST localhost
-ENV SMTP_PORT 25
-ENV SMTP_USER user
-ENV SMTP_PASS pass
-ENV SMTP_USE_TLS No
-ENV SMTP_USE_TLS_CERTS No
-ENV SMTP_FROM_OVERRIDE Yes
-ENV SMTP_USE_STARTTLS No
-ENV SMTP_ROOT root@localhost
-ENV SMTP_HOSTNAME drupal.zz
+#setup ssmtp ENVs defaults example
+#ENV SMTP_MAILHOST localhost
+#ENV SMTP_PORT 25
+#ENV SMTP_USER user
+#ENV SMTP_PASS pass
+#ENV SMTP_USE_TLS No
+#ENV SMTP_USE_TLS_CERTS No
+#ENV SMTP_FROM_OVERRIDE Yes
+#ENV SMTP_USE_STARTTLS No
+#ENV SMTP_ROOT root@localhost
+#ENV SMTP_HOSTNAME drupal.zz
 
 #allow running apache as root, to circumvent docker-host-sharing-file-ownership-madness
 ENV CHANGE_USER_ID No
